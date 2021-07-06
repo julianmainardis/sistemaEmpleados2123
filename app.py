@@ -2,7 +2,8 @@ from flask import Flask
 from flask import render_template
 from flaskext.mysql import MySQL
 app = Flask(__name__)
-
+#MODIFICAR LO QUE SEA
+#modifican otra cosa
 mysql = MySQL()
 app.config['MYSQL_DATABASE_HOST']='localhost'
 app.config['MYSQL_DATABASE_USER']='root'
@@ -17,7 +18,7 @@ def index():
     cursor.execute(sql)
     conn.commit()
     
-    
+
     return render_template('empleados/index.html')
 
 
