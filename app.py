@@ -17,6 +17,7 @@ def index():
     cursor.execute(sql)
     conn.commit()
     
+    
     return render_template('empleados/index.html')
 
 
