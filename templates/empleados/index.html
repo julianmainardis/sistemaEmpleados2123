@@ -1,3 +1,12 @@
+{% include 'header.html' %}
+
+<br>
+<a href="{{url_for('create')}}" class="btn btn-success">
+    Ingresar empleado
+</a>
+<br>
+<br>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +30,12 @@
             {% for empleado in empleados %}
             <tr>
                 <td>{{empleado[0] }}</td>
-                <td>{{empleado[3] }}</td>
+
+                <td>
+                    <img class="img-thumbnail" width="100" src="uploads/{{empleado[3] }}" alt="">
+                </td>
+
+
                 <td>{{empleado[1] }}</td>
                 <td>{{empleado[2] }}</td>
                 <td>
@@ -34,3 +48,5 @@
     </table>
 </body>
 </html>
+
+{% include 'footer.html' %}
